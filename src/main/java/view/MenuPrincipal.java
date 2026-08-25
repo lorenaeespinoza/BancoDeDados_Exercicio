@@ -4,7 +4,7 @@ import static javax.swing.JOptionPane.*;
 
 public class MenuPrincipal {
     public void menu(){
-        String [] item = {"vendendor", "venda", "finalizar" };
+        String [] item = {"vendedor", "venda", "finalizar" };
         String opcao;
 
         do {

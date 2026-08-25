@@ -13,7 +13,7 @@ public class VendedorDAO implements GenericDAO<Vendedor, Integer> {
 
     @Override
     public void inserir(Vendedor entidade) {
-        String sql = "Insert intojava_vendendor (nome) values(?)";
+        String sql = "Insert into java_vendedor (nome) values(?)";
 
         try (Connection connection = ConnectionFactory.obterConexao();
              PreparedStatement ps = connection.prepareStatement(sql)) {
@@ -40,6 +40,8 @@ public class VendedorDAO implements GenericDAO<Vendedor, Integer> {
                 vendedor.setId(rs.getInt("id"));
                 vendedor.setNome(rs.getString("Nome"));
                 lista.add(vendedor);
+
+
             }
         } catch (Exception e) {
             throw new RuntimeException(e);
